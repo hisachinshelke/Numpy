@@ -1,0 +1,1065 @@
+ML- for structured data
+AI - Image, Audio, XML, JSON, unstructured data
+
+error in python:
+1. Logical error
+2. Complie time error
+3. Runtime error
+
+DSA
+1. Inbuilt DS - List, tuple, Set, Dict
+2. User defined DS - Linked list, stack, heap query, array 
+
+---------------------------
+
+1. String can be repreented as '', " " , ''' ''' . space are considered inside quotes.
+2. variable also called as object in Python
+a = 5
+a-varaible that store value 5
+type(a) - int
+
+ipynb - interactive pythn notebook
+
+--------------------
+1. Dynamic programming language - automatically understand the data types
+2. PVM - Python virtual machine
+3. Libraries: more funct combined in one library
+   ml - sklearn
+ dl - tensorflow, keras
+ llm - langchain, langgraph
+ cv - opencv, yolo, mediapipe
+ nlp- nltk, spacy
+ data analysis - numpy, pandas, plt, sns
+ agentic ai - phi data, crew ai
+
+
+import sys
+sys.version
+
+a, b,c,d = 1,2,3,4
+sets a=1, b=2, c=3,d=4
+del a -> deletes a variable from memory
+
+4. Python interpreter and compiler? - both
+interpreter - execute the code line by line 
+compiler - execute all code at once
+
+5. Rules to define Python variable:
+- variable are case sensitive
+- variable never start with number but can end with digit
+- except underscore "_" no other symbol allowed
+-  keywords/reserverd words not allowed
+True, False, None, except these all are small case characters
+- float, int, str data types
+
+import keyword
+keyword.kwlist
+len(keyword.kwlist) = 35 keywords
+
+6. in python function ends with ():
+
+--------------------------
+Lect 6:
+
+1. Python data types:
+i = 25
+type(i) -> int (value without decimal)
+print(type(i)) -> class int
+class - inbuilt 
+class- user defined
+
+f = 109.5
+type(f) -> float - value with decimal
+
+b = True
+type(b) -> bool
+True = 1
+False= 0
+True + False = 1
+True - True = 0
+True * False = 0
+False / True = 0
+True/False = zero division error
+
+
+complex->  a+bj  where a is real, b is imaginary and j is sqroot of -1 and is only present in Python
+
+c1= 10+20j
+type(c1) -> complex
+
+c1.real  -> 10.0
+c1.imag -> 20.0
+
+c2 = 20+30j
+
+c1+c2 = 30+50j  (real added to real and imag added to imag part)
+c1*c2 = -400+700j
+
+
+string -> ends with '', "", """ """
+s1 = "  India  "
+print(s1) -> __India__ considers spaces also
+
+""" ->multiine string, mostly used in nlp
+
+python index with 0, forward index rt to left start with 0
+backward index - lft to rt start with -1
+
+String- slicing [:] colon is called slicing
+
+s= 'nareshit'
+s[:] -> 'nareshit'
+s[3] -> 'e'
+s[-4] -> 's'
+s[1:7] -> "areshi"
+s -> nareshit
+s[10] -> index error
+
+
+int(True) -> 1
+int(False) -> 0
+True -> True
+False-> False
+
+2. Python Operator 
+-Arithmatic
+-Assignemnt
+-Relational 
+-logical
+-uniary
+-----------------------------------------
+Lect 7:
+
+1. Function ends with ()
+
+family() no argu/param
+family1(dad,mom)  2 arg/param
+family2(dad,mom,son,daug) 4 arg/param
+
+
+house(sand,brick,lab,land,water,cement) - 6 args/params
+
+arg = param
+
+2. Typecasting
+convert one datatype to another
+int(2.3) -> 2
+int(2.3, 4.0) -> it takes only one argu
+int(True) -> 1
+int(False) -> 0
+
+float to int = possible
+bool to int - possible
+complex to int - not possible
+
+int('10') -> 10
+int('ten') -> error
+
+all type casting to int except complex and string text
+
+float(10) -> 10.0
+float(2.3, 4.0) -> it takes only one argu
+float(True) -> 1.0
+float(1-2j) -> error
+float('10.0') -> 10.0
+float('ten')-> error
+
+all type casting to float except complex and string text
+
+complex(10)-> 10+0j
+complex(10,20) -> 10+20j
+complex(10,20,30) -> it takes max 2 args
+complex(1.2) -> 1.2+0j
+complex(1.2,20) -> 1.2+20j
+complex(False) -> 0j
+complex('20')-> 20+0j
+complex('10','20') -> cannot take second arg if first one is string
+complex(10,'20') -> complex second arg cannot be string
+
+in complex type only one arg can be string that too first
+all type casting to complex except complex and text string.
+all other datatypes to complex where string uses only one arg
+
+
+bool(2) -> True
+bool of non zero param is true
+bool(0) -> false
+bool(2,4) -> error only one arg allowed
+bool(3.2) -> True
+bool(1+2j) -> True
+bool(0+0j) -> False
+bool('hi') -> True
+bool (  ) -> False
+bool(*) -> Syntax error
+
+str(7) -> '7'
+str(3.4) -> '3.4'
+str(1+2j)-> '1+2J'
+str(True) -> 'True'
+
+3. Python Operators:
+Arithmatic Operator +,-,*,/ ,// ,**
+x1, y1= 10,5
+// -> removes decimal part
+** -> raised to power
+
+Assignment operator
+=, +=, -= ,*=, /=
+x = x +2
+x += 2
+x -=2  means x =x - 2
+x *= 2
+x/= 2
+x//=2
+
+Unary operator:
+unary means 1, binary means 2
+negative value
+
+n = 7
+n = -(n)  only one operator
+-n -> 7
+
+Relational operator
+< > <= >= !=  ==
+r1=5
+r2= 6
+r1>r2 -> False
+r1!=r2 -> True
+r1 == 5 -> True
+
+Logical operator
+and or not
+a=5
+b=3
+a<8 or b>6 -> True
+a<8 and b>6 -> True
+b>5 or a<10 -> True
+
+x= False
+not x ->True
+
+-------------------------------------
+Lect 9:
+
+data type- define one value a= 5
+data structure- define more than one value - cllection of data type  b = a, 10.3, 'Hello'
+matrix is collection of data structure |  | | |
+
+matrix= collection of data structure
+data stru = collection of data type
+data type = definr one value
+
+data stru
+- inbuilt defined > list, tuple, set, dict
+- user defined > stack, queue, tree, linked list
+
+numpy, pandas, seaboarn, sklearn, tensorflow > all user define DS comes with library
+---------------------------------------------------
+Lecture 9:
+
+DS:
+list, tuple, set, dict
+
+list: starts with sq brackets
+l = [] -> []
+len(l) -> 0 no elements
+l.append(10 )  #insert element in list
+l -> [10] 
+len(l) -> 1
+l.append(20)
+l.append(30)
+l.append(40)
+l.append(50)
+l -> [10, 20, 30, 40 ,50]
+len(l) -> 5
+id(l) -> memory location/address in system memory. every variable has address ans is diff for everyone.
+print(type(l)) -> class 'list'
+
+import keyword
+keyword.kwlist-> gives listof  keywords
+len(keyword.kwlist) -> 35
+
+in list duplicates are allowed.
+
+l[:] -> [10,20,30,40,50]
+l[1]-> 20
+l[-3]->30
+
+l1 = l.copy()
+l1 -> [10,20,30,40,50]
+l == l1 -> True
+
+print(len(l)) ->5
+print(len(l1)) -> 5
+but address will be diff
+
+l1.append(1.3)
+l1.append(True)
+l1.append(1+3j)
+ l1 -> [10,20,30,40,50, 1.3, True, (1+2j)]
+l1.count(10) -> 1 # returns number of occurances
+l1.count(100) -> 0
+l
+l1
+l2 -> named error
+l2 = l1.copy()
+l2.remove(True)
+l2 -> [10,20,30,40,50, 1.3, (1+2j)] # true removed
+l2.remove(1+2j)
+l2 -> [10,20,30,40,50, 1.3] # 1+2j removed
+l2.clear() # clears all the elements
+l2 -> []
+del l2 -> deletes the l2 list
+l2 -> named error 
+
+_+ 2 -> 4 # underscore_ stores the previous value
+
+list:
+[]
+append()-> adds number at last
+duplicate is allowed in list
+slicing allowed
+indeixing is allowed
+multiple data type allowed
+copy()-> copy one list to another
+remove() - remove element
+pop() - remves end elemtn of no arg provided and returns the value
+extend() - extends one list ot other list
+index() - gives index of first occurance ofr rlrmrnt
+insert() - insert value before index
+
+Tuple:
+
+--------------------------------
+Lect 10:
+ _ underscore -> stores previous values. works in some systems due to anaconda system version issue.
+
+print(l)
+print(l1)
+print(l2)
+
+print(len(l)) -> 5
+print(len(l1)) -> 9
+
+for i in l:
+    print(i)
+
+10
+20
+30
+40
+50
+
+l.appemd([1,2,3,'hi])
+l -> [10,20,30,40,40, [1,2,3,'hi]]  # list inside list is called nested list
+l.remove(40) # remove first occurance of value
+ l-> [10,20,30,40, [1,2,3,'hi]] 
+l.pop() # remove at end index value and returns new value, if no value is selected
+[10,20,30,40]
+l.pop(1) -> [10,30,40]
+
+l -> [10,20,30,40]
+l.insert(3,35) # insert object before index (1- index position, 2 - value)
+l -> [10,20,30,35, 40]
+l.insert(1,15)
+l -> [10,15,20,30,35, 40]
+
+l2 = []
+l2.extend(l1)  # concatinate the list
+l2.index(20) # provides index of 30 valuefirst occurance
+l1.sort() # sorts in assending order
+l1.sort(reverse=True) # sorts in descending order
+sort allows similar data types only and not mix
+l1.reverse() # reverses the list
+another way l[::-1]
+
+--------------------------------
+Lect 11:
+String list slicing
+
+s1= 'nit'
+s1[0] -> n
+s1[1] -> i
+for i in s1:
+  print(i)
+->
+n
+i
+t
+
+list slicing: mentioned with colon :
+
+: -> diplay entire element
+2: 10 -> print element 2 to 9 n-1
+:10 -> print element start till n-1 10-1= 9 th element
+3: -> print from 3rd to last index
+1:100:10 -> print 1 index, last index 100, step index 10
+
+l[0:20:5] -> start from0th index ends at 19th index and jumps 5 steps every fifth element
+l[::-1] -> it prints elements in reverse order
+l1[::-2] -> prints every 2nd element from right
+
+l1 -> [10,20,30,40,50]
+l1[0] = 45
+l1 -> [45,20,30,40,50] # list is mutalble / hashable
+
+l1[-1] = 'nit'
+[45,20,30,40,'nit']
+
+l1[-1][0] # nested slicing
+-> 'n'
+l1[-1][1] 
+'i'
+l1[-1][3] 
+'t'
+
+l1 = l2 + l3 # combine l2 and l3 and assign to l1 
+
+list membership opertaor
+10 in l1 -> True
+100 in l1 -> False
+
+Enumerate in list
+for i in l1:
+  print(i)
+
+for i in enumerate(l1):
+  print(i)  -> prints enums with first element as index
+
+(0, 10)
+(2, 20)
+(3, 30)
+
+All / Any:
+ all(l3) -> True # means no zero value in list
+l3.append(0)
+any(l3) - True # measn as zero value
+
+-------------------
+Lect 12:
+
+Python is more practical
+
+Tuple:
+
+t = ()
+t -> ()
+print(type(t)) -> class 'tuple'
+t2 = (10,20,30,40,40)
+t1 -> (10,20,30,40,40)
+len(t1) -> 5
+t1. tab -> 2 functions
+t1.count() -> error it takes one arg
+t1.count(10) -> 1 # 10 is 1 time
+t1.count(40) -> 2 # 40 is occuring 2 times
+t1.index(20) -> 1 # position
+
+l5 = ['a','b','c','d']
+l5 -> ['a','b','c','d']
+l5[1] = 10
+l5 -> ['a',10 ,'c','d'] # list is mutable
+
+t2 = (100, 3.4, 'NIY', 1+2j, [1,2,3], (1,2,3), True)
+t2 ->  (100, 3.4, 'NIY', 1+2j, [1,2,3], (1,2,3), True) # all data types acceptable
+t2 = (10,20,30,40,40)
+t1 -> (10,20,30,40,40)
+t1[0] = 10 -> error # tuple is un-mutable
+
+list is mutable i.e. hashable | tuple is not mutable i.e is inhashable
+duplicate allowed | duplicate is allowed
+multiple data types allowed | multiple data types allowed 
+indexing and slicng allowed | indexing and slicng allowed 
+many functions | 2 funct - count and index
+
+icici = (45678, abcd1234, 01012010, 123123)
+icici -> (45678, abcd1234, 01012010, 123123)
+icici[0] = 1234 -> Error # not allowed tuple DS
+
+t4 = t1*3
+t4 ->  (10,20, 30,40,40, 10, 20,30,40,40, 10,20,30,40,40) # gets repated three times
+t4[:] -> (10,20, 30,40,40, 10, 20,30,40,40, 10,20,30,40,40) # gets repated three times
+t1 -> (10,20,30,40,40)
+t1[:7] ->  (10,20,30,40,40)  # no error but complete slice
+t1[2:] -> (30, 40,50)
+t1[0:10:2] -> (10, 30, 40)
+
+t1.remove(30) -> error not allowed
+t2.index(100) -> 0
+
+9353157658 - Sir number
+In Stats distribution concept is born from probability
+ticket 74% confimration -> naive bayes algo, basein theorem math concept
+
+SET: 
+----
+s = {} 
+s -> {}
+type(s) -> dict 
+#set and dict both are defined by {}
+
+-----------------------
+Lect 13:
+--------
+ for i in t1:   # alos enumerate is also allowed
+    print(t1)
+
+-> 10 20 30 40 50 -> Allowed   
+
+s = {} 
+s -> {}
+type(s) -> dict 
+#set and dict DS both are defined by {}
+
+# define empty set 
+s1 = set()
+type(s1) -> set # empty set 
+
+tuple()
+set()
+list()
+above are ways to defines empty DS 
+
+s2 = {20, 100, 3, 45}
+s2 -> {3, 20, 45, 100} # set gives ordered output if define similar data type 
+# if not similar dataype, no ordered output in SET 
+
+s3 = {'c','a','e'}
+s3 -> {'a', 'c', 'e'}  # output is ordered as same data type 
+
+SET represents ordered items 
+
+s4 = {1, 1.2, True, 1+3j, (2,3,4), [1,2,3]}
+s4 -> error unhashable  # list not allowed in mix
+
+s5 = {2, 3.4, False, 1+2j}
+s5 -> {2, 3.4, False. 1+2j} # not ordered due to mix datatype 
+
+Data Structure can have more than one Data type but 
+Data type has only one type of values 
+DataST - list, tuple, set, dict 
+
+s2 -> {3, 20, 45, 100}
+s2.add(30) # added at position such that order is mantained 
+s2 -> {3, 20, 30, 45, 100}
+s2.add(200)
+s2 -> {3, 20, 30, 45, 100, 200} # added at position such that order is mantained 
+
+s2[:] -> Error 
+s2[1:5] -> Error # In set Index slicing is not allowing
+In SET Indexing and slicing is not allowing
+
+s5 -> {2, 3.4, False. 1+2j}
+s4 = s5.copy()
+s4 -> {2, 3.4, False. 1+2j}
+s4.add(2)
+s4 -> {2, 3.4, False. 1+2j}
+# In SET duplicate is not allowed 
+
+s5.clear()
+s5 -> empty # clears all the values 
+
+del s5 
+
+s4.remove((1+2j)) # takes only one args
+s4 -> {2, 3.4, False}
+
+s3 -> {'c','d','m'}
+s3.discard('m') -> NO ERROR - it removes, but if not member, it will NOT give error
+s3.remove('m') -> ERROR as m is not member 
+
+if not member -> discard and remove both removes but discard never gives error but remove does
+
+s3.pop() # takes random and removes and gives that output. For other it removes last 
+s2.pop(3) -> Error # as indexing is not allowed in set 
+
+for i in s2: # also enumerate 
+  print(i) 
+works
+
+5 in s2 # membership opertor 
+-> False 
+
+s2.update(s3) -> adds s3 elements to s2 at the end 
+
+
+list is mutable i.e. hashable | tuple is not mutable i.e is inhashable | {}
+duplicate allowed | duplicate is allowed 
+multiple data types allowed | multiple data types allowed 
+indexing and slicng allowed | indexing and slicng allowed | indexing and slicng NOT allowed
+many functions | 2 funct - count and index
+
+SET Operations: 
+---------------
+s6 = {1,2,3,4,5}
+s7 = {4,5,6,7,8}
+s8 = {8,9,10}
+
+s6.union(s7) -> {1,2,3,4,5,6,7,8} # no duplicate values 
+s6.union(s7, s8) -> {1,2,3,4,5,6,7,8, 9, 10} # no duplicate values 
+#union can accept multiple args 
+
+s6 | s7 -> {1,2,3,4,5,6,7,8}  #this is also union
+s6 |s7 | S8  -> {1,2,3,4,5,6,7,8, 9, 10} #this is also union
+s6 -> {1,2,3,4,5}
+s7 -> {4,5,6,7,8}
+s8 -> {8,9,10}
+
+s6.intersection(s7) -> {4,5,6} # common value 
+s6.intersection(s8) -> {} # since no common
+s6 & s7 -> means intersection 
+
+s6 -> {1,2,3,4,5}
+s7 -> {4,5,6,7,8}
+s8 -> {8,9,10}
+
+s6.difference(s7) -> {1,2,3} # removes those elements from s6 that are present in s7
+s6 -s7 -> {1,2,3}
+s8 - s7 -> {9, 10}
+
+union |
+interseaction & 
+difference -
+symmetrice_difference ^
+
+s6 -> {1,2,3,4,5}
+s7 -> {4,5,6,7,8}
+s8 -> {8,9,10}
+
+s6.symmetrice_difference(s7) -> {1,2,3,6,7,8} # gives elements of both sets after removing the commons
+s6 ^ s7 -> {1,2,3,6,7,8} # gives elements of both sets after removing the commons
+
+
+-------------------------------
+Lect 14-
+Superset (dad) Parent
+Subset (son) Child
+Disjoint (neighbour) No relation
+
+s11 -> {1,2,3,4,5,6,7,8,9}
+s12 -> {3,4,5,6,7,8}
+s13 -> {10, 20, 30,40}
+
+s12.issubset(s11) -> True  # is s12 child of s11 
+s11.issubset(s12) -> False
+s11.issuperset(s12)-> True # 
+s13.isdisjoint(s12) -> True # no relation
+s13.isdisjoint(s11) -> True # no relation
+
+s12 = {1,2,3,4,5}
+s13 = {10,20,30}
+s14 = {15,25,35}
+s12.subset(s13) -> False # true is all elements are present 
+subset -> LHS all values should be present in RHS 
+
+for i in s12: 
+  print(1) # works and also ennumerate also works
+
+sum(s12) -> 17
+min(s12) -> 1
+max(s12) -> 5
+sort(s12) -> assending order 
+
+DICTIONARY: 
+-----------
+
+Key: Value 
+
+dict data structures 
+
+keys are unique 
+values can be duplicate 
+
+values can be accessed by key part 
+
+dict - is mutable. can change key/value to any data type 
+
+d = {}
+d -> {}
+type(d) -> dict 
+
+d1= { 1: 'one', 2: 'two', 3: 'three'}
+d1.keys() -> 1,2,3
+d1.values() -> 'one','two','three'
+
+d2 = d1.copy()
+d2 -> { 1: 'one', 2: 'two', 3: 'three'}
+
+d1.items() -> [ (1: 'one'), (2: 'two'), (3: 'three')]
+
+d1[1] -> 'one'
+d1[2] = "two" # updates value for key 2
+
+RANGE:
+------
+
+range(10) -> range(0,10)
+list(range(0,10)) -> [0,1,2,3,4,5,6,7,8,9]
+
+list(range(10,20)) -> [10,11,12,13,14,15,16,17,18,19]
+list(range(10,20,3)) -> [10, 13, 16, 19]
+# Range expects max 3 args 
+
+r = range(1, 10)
+
+for i in r: 
+  print(i)
+ -> 1 2 3 4 5 6 7 8 9
+
+x = y -> points to same address. so if any change is made for y, it will refelect for x also 
+
+in PYTHON there is NO constant.
+
+---------------------------------
+Lecture 15:
+Numpy:
+------
+Jupyter noebook - Python, Data Analyst,business analyst
+Spyder - ML, AI 
+VSCode - genAI, AGenAi
+PyCharm - Python, loops, opencv
+ 
+Cursor - integrated with LLM 
+Extension -
+Github copilot 
+Python Debugger 
+AREPL for python 
+autoDocString 
+Code Runner 
+INtelliCode 
+Jupyter 
+llm-vscode 
+markdownlint 
+office viewer 
+pdf viewer 
+python pylance 
+python image preview 
+python extensions pack 
+--
+Ways to store data
+a = 5
+b = [1,2,4]
+matrix - rows and colums 
+To handle such data we have numpy
+
+Numpy - collection of data struc + array + maths powers 
+
+image, text, internally converted to text only 
+
+N-D Array - n dimen array 
+Numpy is lib that handles n-d array 
+
+Uses of Numpy: 
+arithmateic operations 
+statis op 
+bitwise op 
+copy and view 
+stacking 
+matrix 
+lin alegb 
+broadcasting 
+math op 
+sorting, searching  
+
+Use use it: 
+data analysit 
+data sc
+genAi 
+
+import numpy as np 
+np.__version__ 
+-> 1.26.3 
+
+import sys 
+sys.version
+-> 3.11.7
+
+how to check version use ".__version__"
+
+!pip install numpy # install only if error as no module found 
+
+
+my_list = [0,1,2,3,4,5]
+type(my_list) -> list 
+
+arr = np.array(my_list) # convert list to array 
+type(arr) -> numpy.ndarray 
+arr -> array([1,2,3,4,5])
+
+np.arange(15) -> array([0,1,2,3,...14])
+
+-----------------------------
+Lecture 16: (12 MArc)
+
+pip install numpy 
+
+.ipynb is extension for jupyter notebook
+.py - python 
+strcuture data - xlcs, csv 
+unstructured - audio, .hdf, mp3, mp4, jpg, png ,etc 
+
+pip install packageName
+
+in matrix, the indexing starts with 0. By default the first considered as row part.
+
+package - collection of module 
+module - collection of functions 
+function - collection of statements 
+          inbuild function - print(), max(), min(), len()
+          user defined functions - always assigned with def keyword 
+
+from dmart.clothing import jeans 
+dmart- pakacge 
+clothing is module 
+jeans is function 
+
+from sklearn.tree import decisiontreeclassfier 
+
+np.arange(15) -> array([0,1,2,3..14])
+shift + tab 
+np.arange(3.0) -> array([0.,1.,2.])
+np.arange(0,5) -> array([0,1,2,3,4])
+np.arange(10,20) -> array([10,11,12,13,14..19])
+np.arange(20,10) -> array([]) no error but empty 2nd args < 1st args 
+np.arange(-20,10) -> array([-20,-19,-18...7,8,9])
+np.arange() -> Error, as it miss stop args 
+np.arange(10,30,5) -> array([10,15,20,25])
+np.arange(0,10,3) -> array([0,3,6,9])
+np.arange(1,2,3,4) -> error - max 3 args allowed 
+
+np.zeros(3) -> array([0.,0.,0.]) # o/p as float # parameter tunnig by deafult float - 1D
+np.zeros(10) -> array([0.,0.,0.,..,0.]) - 10 times zeros 
+np.zeros(3, dtype=int) -> array([0,0,0]) # hyperparameter tuning 
+
+paramter tunning - system by default gives paramter 
+hyperparameter tuning - user wanted to change system parameter
+finetuning- hyperparamter in llm
+these above terms used in ml, ai, genai, etc 
+
+
+np.zeros((2,2), dtype = int)
+-> ([0,0]
+    [0,0])  #2D
+
+np.zeros((rows, column))
+np.zeros(5,10) -> 5 rows, 10 cols, float types , nd
+
+np.ones(3) -> array([1.,1.,1.])  # one D
+np.ones(3, dtpye = int) ->  array([1,1,1])
+
+np.twos((2,3)) -> Error # two is not function of NP 
+np.three((2,3)) -> Error # three is not function of NP 
+
+
+np.random.rand(5) # generated random number
+-> array([0.123,0.23432,0.456,0.34534,0.2342])
+
+np.random.rand(5)
+np - package 
+random - module 
+rand - function 
+arg - 5
+
+np.random.rand(3,5) -> array for 3 rows and 5 cols with different values always 
+
+np.eye() -> identity matrix with 1s
+
+np.random.randint(3,5)
+-> in ineger form number between 3 and 5 random numbers 
+3 is incl, 5 is exlcu 
+
+np.random.randint(10,20,5)
+-> array of 5 numbers in ineger form number between 10 and 20 random numbers 
+10 is incl, 20 is exlcu 
+
+np.arange(1,13).reshape(3,4) 
+-> array of shape 3 row and 4 col, for nums between 1 incl and 13 exclu 
+
+arrange and reshape size (rows x colms) should be same.
+
+matplotlib - visulaitions 
+
+complete T11, T12
+
+-------------------------------------
+Lect 17 (13 Macr)
+
+np.random.rand -> generated float number between 0 and 1
+np.random.randint -> generated int number between 0 and 1
+
+matrix slicing: 
+np.random.randint(10,20,(10,10)) # generte with 10 x 10 matrix 
+
+np.arange(1,13) -> array([1,2,...,12])
+np.arange(1,13).reshape(3,4) -> array of 3x4 matrix 
+
+b = np.random.randint(10,20,(10,10)) # generte with 10 x 10 matrix 
+b = np.random.randint(10,20,(row,colm)) 
+type(b) -> numpy.ndarray 
+
+b -> array of 10x10 matrix 
+b[:] -> array of 10x10 matrix - print entir matrix 
+b[1:3] ->slicing - array matrix 1st row annd 2nd row (n-1 formular applies here also.)
+slicing gives rows from 1st row till 3rd row
+b[-4:2] -> one row
+
+b[1,2] -> 5 single value at 1st row and 2nd col - print specific element 
+b[1,-1] -> 12 lt-rt/tptobm -> index starts with 0, else with -2
+comma gives single values 
+
+Numpy operations: 
+-----------------
+
+a = np.random.randint(10,20,10)
+a -> generate 10 random int between 10 and 20
+
+a = np.random.randint(0,20,(10,100) -> 10x100 matrix of values between 0 and 20
+
+a[::-1] => reverses the matrix 
+a[::-2] => reverse the matrix with step count 2
+a[:-3] => upto -4 row (n-1)
+arr.max()
+arr.min()
+
+numpy has 217 functions.
+can we cal all functions at one - 
+from numpy import *
+meadian(arr)
+
+row = 4
+col = 5
+mat[row,col] -> 45 (comma applied)
+mat[6] -> prints a specific row 
+mat[:, col] -> print specifc col
+mat[:, 5] -> prints 5th col
+
+mat[2:6, 2:4] -> row part and col part 
+
+Filter: 
+-------
+
+mat<50
+-> gives true upto 59
+
+mat[mat<50] 
+-> Prints numbers till 49
+
+mat[mat>=50] 
+-> Prints numbers greater than 50
+
+mat[mat!=50] 
+-> Prints numbers except 50
+
+----
+#Print image 
+
+import numpy as np 
+import matplotlib.pyplpt as plt 
+from PIL import Image
+
+#matplotlib -> used for visualisations
+#PIL - python image library 
+
+horse_img = Image.open(r'C:Doanld\Image\hosr.jpg')
+# r means raw string 
+horse_img
+# plt.show(horse_img) or try 
+
+--------------------------------
+Lecture 18: 14 Mar 
+help()
+id(num) -> address of the memory location 
+
+In python there is no constant.
+
+Number System Conversion:
+-------------------------
+
+Binary - base value 2 - bin
+Octal - 8 - oct
+Decimal - 10 - dec
+Hexadecimal - 16 - hex
+
+15 -> 15
+bin(15) -> 0b1111
+bin(25) -> ob1010  # 0b means binary, 0O for octal 
+
+0b1111 -> 15
+
+oct(15)  -> 0o17 # 0o means Octa 
+
+hex(16) -> 
+0-9, a=10, b=11, c=12.. till f=16
+ip address are written is written in hexa 
+
+
+----
+
+how to swap two variables
+
+a = 5
+b = 6
+
+a=b 
+b=a 
+not correct way 
+a -> 6
+b -> 6
+
+1st way:
+temp = a1 
+a1 = b1 
+b1 = temp 
+correct way 
+
+2nd way:
+a2 = a2 + b2 
+b2 = a2 - b2 
+a2 = a2 - b2
+
+3rd way: 
+a2 , b2 = b2, a2 # it applies swap rotational concept 
+
+Decorator concept: the concept will be required 
+
+
+Bitwise operator: 
+-----------------
+Complement (~)
+AND &
+OR |
+XOR ^
+Left Shift <<
+Right Shift >>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
